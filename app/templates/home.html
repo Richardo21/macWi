@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block main %}
+<div class="home-container">
+    <div class="home-page-header">
+        <h1 class="home-page-title">macWi Games</h1>
+        <h5>Download the latest games for Apple's and Microsoft's Operating Systems.</h5>
+    </div>
+    <div class="nav-bar-items">
+        <li class="items1"><a href="{{url_for('login')}}">SIGN IN</a></li>
+        <li class="items1"><a href="{{url_for('newaccount')}}">CREATE ACCOUNT</a></li>
+    </div>
+    <div class="nav-bar-items1">
+        <li class="items2"><a href="{{url_for('about')}}">ABOUT</a></li>
+        <li class="items2"><a href="{{url_for('contact')}}">CONTACT</a></li>
+    </div>
+</div>
+{% endblock %}

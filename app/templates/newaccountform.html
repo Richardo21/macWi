@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block main %}
+
+<div class="register-form">
+    <form method= "POST" enctype= "multipart/form-data" action="{{url_for('dashboard')}}" >
+        {% include "flash_messages.html" %}
+        <h3 class="form-headingText">Create Account</h3>
+        <h6>Fill out this form if you haven't created an account.</h6>
+        {{form.csrf_token}}
+        {{form.firstname.label}}<br>
+        {{form.firstname(class="form-control", placeholder= "Eg: John")}}<br><br>
+        {{form.lastname.label}}<br>
+        {{form.lastname(class="form-control", placeholder= "Eg: Brown")}}<br><br>
+        {{form.username.label}}<br>
+        {{form.username(class="form-control", placeholder= "Eg: johnbrown21")}}<br><br>
+        {{form.dob.label}}<br>
+        {{form.dob(class="form-control")}}<br><br>
+        {{form.profile_img.label}}<br>
+        <input type="file" id="profile_img"><br><br>
+        {{form.password.label}}<br>
+        {{form.password(class="form-control", placeholder="**********")}}<br><br>
+        <button id = "createAccBtn"class="btn btn-primary">Create My Account</button>
+    </form>
+</div>
+{% endblock %}
+

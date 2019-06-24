@@ -1,0 +1,8 @@
+Flask
+Flask-WTF
+Flask-Mail
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+Flask-Login
+psycopg2

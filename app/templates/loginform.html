@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block main %}
+{% include "flash_messages.html" %}
+<div class="register-form">
+    <form method= "POST" enctype= "multipart/form-data" action="{{url_for('dashboard')}}" >
+        {% include "flash_messages.html" %}
+        <h3 class="form-headingText">Sign In</h3>
+        <h6>Sign in if you have created an account.</h6>
+        {{form.csrf_token}}
+        {{form.username.label}}<br>
+        {{form.username(class="form-control", placeholder= "Eg: johnbrown21")}}<br><br>
+        {{form.password.label}}<br>
+        {{form.password(class="form-control", placeholder="**********")}}<br><br>
+        <button id = "LogintoAccBtn"class="btn btn-primary">Sign Into My Account</button>
+    </form>
+</div>
+{% endblock %}

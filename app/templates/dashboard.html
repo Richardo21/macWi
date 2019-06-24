@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block main %}
+<div class="dashboard-main-container">
+    <div class="dashboard-header">
+        {% include "flash_messages.html" %}
+        <h5 class="dashboard-page-title">macWi</h5>
+        <h1 id="myDashboardText">My Dashboard</h1>
+        {{form.selectionOS.label(class="selectionLabel")}}
+        {{form.selectionOS(class="form-control selection")}}
+        <!--<h3 class="todays-date-dashboard">Today's Date: {{date}}</h3>-->
+        <img class="dashboard-profile-photo" src="https://profilepicturesdp.com/wp-content/uploads/2018/07/facebook-no-dp-1.jpg" 
+        height="200" width="200" alt= "Your Profile Photo">
+    </div>
+    <div class="dashboard-list-container">
+        <a class="games-link" href="#"><img src="https://www.ar-gamez.com/wp-content/uploads/2018/11/fifa-19-pc-download.jpg"
+        width="500" height="300" alt="FIFA19 Thumbnail"></a>
+        <a class="games-link" href="#"><img src="https://i2.wp.com/techlector.com/wp-content/uploads/2018/07/fortnite-hero-edited.jpg?fit=1600%2C900&ssl=1"
+        width="500" height="300" alt="Fortnight Thumbnail"></a>
+        <a class="games-link" href="#"><img src="https://static.wixstatic.com/media/572b54_83db6bbf68ac4083aa88f70cb97cc18e.png"
+        width="500" height="300" alt="Call of Duty Thumbnail"></a>
+        <a class="games-link" href="#"><img src="https://i.ytimg.com/vi/QES6r0NuCH0/maxresdefault.jpg"
+        width="500" height="300" alt="Wasteland 3 Thumbnail"></a>
+    </div>
+</div>
+{% endblock %}

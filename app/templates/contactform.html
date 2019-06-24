@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block main %}
+<div class="register-form">
+    <form method= "POST" action="{{url_for('contact')}}">
+        {% include "flash_messages.html" %}
+        <h3 class="form-headingText">Contact Us</h3><br>
+        {{form.csrf_token}}
+        {{form.email.label}}
+        {{form.email(class="form-control", placeholder = "Eg: johnbrown@gmail.com")}}<br>
+        {{form.subject.label}}
+        {{form.subject(class= "form-control", placeholder = "Include a subject with your message.")}}<br>
+        {{form.message.label}}
+        {{form.message(cols = "30", rows = "5", class="form-control", placeholder = "This message may also be game request.")}}<br><br>
+        <button id="sendmsgBtn" class="btn btn-primary">Send Message</button>
+    </form>
+</div>
+{% endblock %}
